@@ -19,7 +19,7 @@ public class long_subarr_better {
                 s-=a[l];
                 l++;
             }
-            if(s<=k)
+            else
             max=Math.max(max,r-l+1);
             r++;
         }
