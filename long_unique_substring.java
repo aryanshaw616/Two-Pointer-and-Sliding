@@ -1,7 +1,7 @@
 import java.util.*;
 public class  long_unique_substring{
     public static boolean unique(String s, char ch) {
-        return s.contains(ch+"");
+        return s.indexOf(ch) == s.lastIndexOf(ch);
     }
 
     public static void main(String[] args) {
@@ -14,7 +14,7 @@ public class  long_unique_substring{
         while (r < n) {
             char ch = s.charAt(r);
             st += ch;
-            if (unique(st, ch)) {
+            if (!unique(st, ch)) {
                 st = st.substring(l);
                 l++;
             } else 
